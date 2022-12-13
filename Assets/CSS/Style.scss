@@ -1,0 +1,50 @@
+@use 'Botones.scss';
+
+body{
+    margin:0;
+    padding: 0;
+
+ display: grid;  
+ min-height: 100vh;
+ grid-template-rows: auto 1fr auto; 
+}
+
+
+
+nav{
+    background-color: #ffff;
+}
+
+#ContenidoP{
+    margin-top: 9.375rem;
+}
+
+.card{
+    h5{
+        margin-top: 2rem;
+        color: #1f42b3;
+    }
+
+    .enviar{
+        margin-top: 2rem;
+    }
+
+    border-bottom: 15px solid #173187;
+
+    
+}
+
+footer{
+
+    p{
+        color: #ffff;
+        font-size: 12px;
+    }
+
+    padding-top: 2.5rem;
+    height: 13.25rem;
+    background-color: #173187;
+    margin-top: 2rem;
+
+}
+
