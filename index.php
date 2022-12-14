@@ -54,18 +54,13 @@
                             </div>
                             <input name="btnIngreso" class="bubbly-button enviar" type="submit" value="Iniciar sesión">
                         </form>
-                        <?php
-                        require 'inic.php'
-                        ?>
+
+                        <?php require 'inic.php' ?> <!--requiriendo las funcionalidades para ingresar sesion en la app-->
+                        
                     </div>
                 </div>
             </div>
 
-            <!--
-            <button class="bubbly-button" onclick="log()">Iniciar Sesion</button>
-            or
-            <button class="bubbly-button" onclick="reg()">Registrar Usuario</button>
-            -->
 
     </main>
     <footer class="text-center">
@@ -73,12 +68,6 @@
         <p>Dirección de Tecnologías de la Información - Unidad de Servicios Web</p>
         <p>© 2022 Powered by Servieduca All rights reserved</p>
     </footer>
-
-
-
-
-
-
 
 
 
