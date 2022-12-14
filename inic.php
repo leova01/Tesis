@@ -1,22 +1,22 @@
 <?php
-session_start();
+session_start(); //inicia la sesion del navegador
 
-require 'database.php';
+require 'database.php'; // conexion con la base de datos
 
 
-if (isset($_POST['btnIngreso'])) {
-    if ( strlen($_POST['email']) >= 1 && strlen($_POST['password']) >= 1) {
+if (isset($_POST['btnIngreso'])) { //linea que confirma que se presiono el boton de login y ejecuta proceso de inicio de sesion
+    if ( strlen($_POST['email']) >= 1 && strlen($_POST['password']) >= 1) {//confirma que los campos no esten vacios
 
         $email = trim($_POST['email']);
         $pass = trim($_POST['password']);
 
-        $sql=$conex->query("SELECT * FROM usuario WHERE email='$email' AND Clave='$pass' ");
+        $sql=$conex->query("SELECT * FROM usuario WHERE email='$email' AND Clave='$pass' ");// consulta a la base de datos
 
         if($datos=$sql->fetch_object()){
             $_SESSION["id"]=$datos->ID;
             $_SESSION["nombre"]=$datos->Nombre;
             $_SESSION["apellido"]=$datos->Apellido;
-            header("location: Home.php");
+            header("location: Home.php");//redireccionamiento luego de loguear
         }else{
             echo "<h3 class='bad'>Acceso Denegado</h3>";
         }

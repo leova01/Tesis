@@ -1,3 +1,5 @@
+<?php require 'SessionOn.php'; ?> <!--Validacion de logueo-->
+
 <!doctype html>
 <html lang="es">
 
@@ -18,7 +20,8 @@
 
     <?php
     require './partials/header.php'
-    ?>
+    ?> <!--requiriendo modulo del header-->
+
     <main>
 
         <?php if (!empty($message)) : ?>
@@ -68,13 +71,13 @@
             </div>
             <input name="Registrar" class="bubbly-button enviar" type="submit">
         </form>
-<?php  include "register.php"; ?>
+<?php  include "register.php"; ?> <!--Requiriendo las funciones de Registro-->
 
 
     </main>
     <?php
     require './partials/Footer.php'
-    ?>
+    ?><!--requiriendo modulo del footer-->
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
     </script>

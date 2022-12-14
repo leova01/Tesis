@@ -1,9 +1,4 @@
-<?php
-session_start();
-if (empty($_SESSION["id"])){
-    header("location: index.php");
-}
-?>
+<?php require 'SessionOn.php'; ?> <!--Validacion de logueo-->
 
 <!doctype html>
 <html lang="en">
@@ -23,7 +18,7 @@ if (empty($_SESSION["id"])){
 
 <body>
 <?php
-    require './partials/header.php'
+    require './partials/header.php' //Requiriendo modulo de header
 ?>
 
 <?php echo $_SESSION["nombre"];?>
