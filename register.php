@@ -15,7 +15,10 @@
 	    $Nombre = trim($_POST['Nombre']);
 	    $Apellido = trim($_POST['Apellido']);
 		$email = trim($_POST['email']);
-		$Contraseña = trim($_POST['pass']);
+
+		//$Contraseñaa = trim($_POST['pass']);
+		$Contraseña = password_hash(trim($_POST['pass']), PASSWORD_BCRYPT);
+		
 		$Contraseña2 = trim($_POST['pass2']);
 		$Rango=  trim($_POST['rango']);
 		//almacenando Data en Variables
