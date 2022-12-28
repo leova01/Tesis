@@ -1,4 +1,4 @@
-<?php require 'SessionOn.php'; ?> <!--Validacion de logueo-->
+<?php require './controlador/SessionOn.php'; ?> <!--Validacion de logueo-->
 
 <!doctype html>
 <html lang="es">
@@ -71,7 +71,7 @@
             </div>
             <input name="Registrar" class="bubbly-button enviar" type="submit">
         </form>
-<?php  include "register.php"; ?> <!--Requiriendo las funciones de Registro-->
+<?php  include "./controlador/register.php"; ?> <!--Requiriendo las funciones de Registro-->
 
 
     </main>

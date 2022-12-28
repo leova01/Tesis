@@ -17,7 +17,9 @@
 		$email = trim($_POST['email']);
 
 		//$Contraseñaa = trim($_POST['pass']);
-		$Contraseña = password_hash(trim($_POST['pass']), PASSWORD_BCRYPT);
+		//$Contraseña = password_hash(trim($_POST['pass']), PASSWORD_BCRYPT);
+		
+		$Contraseña = md5(trim($_POST['pass']));
 		
 		$Contraseña2 = trim($_POST['pass2']);
 		$Rango=  trim($_POST['rango']);

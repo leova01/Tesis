@@ -44,7 +44,7 @@
                                 <span class="input-group-text" id="addon-wrapping">
                                     <iconify-icon icon="mdi:email"></iconify-icon>
                                 </span>
-                                <input name="email" type="eail" class="form-control" placeholder="Correo electronico" aria-label="Username" aria-describedby="addon-wrapping">
+                                <input name="email" type="email" class="form-control" placeholder="Correo electronico" aria-label="Username" aria-describedby="addon-wrapping">
                             </div>
                             <div class="input-group flex-nowrap mt-5">
                                 <span class="input-group-text" id="addon-wrapping">
@@ -55,7 +55,7 @@
                             <input name="btnIngreso" class="bubbly-button enviar" type="submit" value="Iniciar sesión">
                         </form>
 
-                        <?php require 'inic.php' ?> <!--requiriendo las funcionalidades para ingresar sesion en la app-->
+                        <?php require './controlador/inic.php' ?> <!--requiriendo las funcionalidades para ingresar sesion en la app-->
                         
                     </div>
                 </div>
@@ -77,7 +77,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
     </script>
-    <script src="./Assets/JS/Botones.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
 </body>
 
