@@ -7,9 +7,12 @@ $ubicacion = $_POST['UbicacionPc'];
 
 $sql=$conex->query("SELECT * FROM equipos WHERE Ubicacion='$ubicacion' ");
 
+ $ObjetoDatos=$sql->fetch_object();
 
 
-$datos[] =[$sql];
+$datos[] =[$ObjetoDatos];
+
 
 echo json_encode($datos);
+
 ?>
