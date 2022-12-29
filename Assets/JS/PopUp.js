@@ -29,7 +29,9 @@ function regresar() {
       UbicacionPc: $("#contenido").val(),
     },
   }).done(function (data) {
-    $("#informacion").append(data);
-    console.log(data)
+    
+    $("#informacion").html(data);
+    
+    console.log(data);
   });
 }
