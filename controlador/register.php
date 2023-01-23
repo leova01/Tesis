@@ -26,6 +26,7 @@ if (isset($_POST['Registrar'])) { //validacion del boton siendo presionado
 		//almacenando Data en Variables
 
 		$consulta = "INSERT INTO usuario(Nombre,Apellido,email,Clave,Nivel) VALUES ('$Nombre','$Apellido','$email','$Contraseña','$Rango')"; //consulta a la BD
+		
 		$resultado = mysqli_query($conex, $consulta);
 		if ($resultado) {
 ?>
