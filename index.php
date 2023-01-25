@@ -1,6 +1,3 @@
-
-
-
 <!doctype html>
 <html lang="es">
 
@@ -39,7 +36,7 @@
                 <div class="col">
                     <div class="card">
                         <h5 class="card-title">Ingrese credenciales</h5>
-                        <form  method="POST">
+                        <form method="POST">
                             <div class="input-group flex-nowrap ">
                                 <span class="input-group-text" id="addon-wrapping">
                                     <iconify-icon icon="mdi:email"></iconify-icon>
@@ -56,7 +53,7 @@
                         </form>
 
                         <?php require './controlador/inic.php' ?> <!--requiriendo las funcionalidades para ingresar sesion en la app-->
-                        
+
                     </div>
                 </div>
             </div>

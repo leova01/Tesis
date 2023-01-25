@@ -17,7 +17,7 @@ echo"
 
 <div class='item border'>
 <h2>Editar informacion del personal</h2>
-<a class='bubbly-button enviar'>Modificar</a>
+<a class='bubbly-button' href='./ModiPer.php'>Modificar</a>
 </div>
 
 </div>

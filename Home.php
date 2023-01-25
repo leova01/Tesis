@@ -29,36 +29,36 @@
     <?php require './controlador/PrepOrCord.php'; ?>
     <div class='grid border'>
 
-    
-    <div class="item border">
-  <h2>Seleccion de aula</h2>
-  <form action="">
-    <div>
-      <h3 class="d-inline">1F</h3>
-      <ul class="d-inline">
-        <il><input onclick="PopUp('F3')" class="opcion" type="button" value="F3" /></il>
-        <il><input onclick="PopUp('F4')" class="opcion" type="button" value="F4" /></il>
-        <il><input onclick="PopUp('F5')" class="opcion" type="button" value="F5" /></il>
-        <il><input onclick="PopUp('F6')" class="opcion" type="button" value="F6"/></il>
-        <il><input onclick="PopUp('F7')" class="opcion" type="button" value="F7"/></il>
-        <il><input onclick="PopUp('F8')" class="opcion" type="button" value="F8"/></il>
-        <il><input onclick="PopUp('F9')" class="opcion" type="button" value="F9"/></il>
-        <il><input onclick="PopUp('F10')" class="opcion" type="button" value="F10"/></il>
-        <il><input onclick="PopUp('F11')" class="opcion" type="button" value="F11"/></il>
-        <il><input onclick="PopUp('F12')" class="opcion" type="button" value="F12"/></il>
-      </ul>
-    </div>
+
+      <div class="item border">
+        <h2>Seleccion de aula</h2>
+        <form action="">
+          <div>
+            <h3 class="d-inline">1F</h3>
+            <ul class="d-inline">
+              <il><input onclick="PopUp('F3')" class="opcion" type="button" value="F3" /></il>
+              <il><input onclick="PopUp('F4')" class="opcion" type="button" value="F4" /></il>
+              <il><input onclick="PopUp('F5')" class="opcion" type="button" value="F5" /></il>
+              <il><input onclick="PopUp('F6')" class="opcion" type="button" value="F6" /></il>
+              <il><input onclick="PopUp('F7')" class="opcion" type="button" value="F7" /></il>
+              <il><input onclick="PopUp('F8')" class="opcion" type="button" value="F8" /></il>
+              <il><input onclick="PopUp('F9')" class="opcion" type="button" value="F9" /></il>
+              <il><input onclick="PopUp('F10')" class="opcion" type="button" value="F10" /></il>
+              <il><input onclick="PopUp('F11')" class="opcion" type="button" value="F11" /></il>
+              <il><input onclick="PopUp('F12')" class="opcion" type="button" value="F12" /></il>
+            </ul>
+          </div>
 
 
-    <div>
-      <h3 class="d-inline">Prueba</h3>
-      <ul class="d-inline">
-        <il><input onclick="PopUp('K01')" class="opcion" type="button" value="Prueba"/></il>
-      </ul>
-    </div>
-</form>
+          <div>
+            <h3 class="d-inline">Prueba</h3>
+            <ul class="d-inline">
+              <il><input onclick="PopUp('K01')" class="opcion" type="button" value="Prueba" /></il>
+            </ul>
+          </div>
+        </form>
 
-</div>
+      </div>
 
 
       <div class='item border'>
@@ -71,9 +71,9 @@
     <div class='ventana' id='ventana'>
       <iconify-icon icon='material-symbols:close' onclick='ClosePopUp()' class='salir'></iconify-icon>
 
-      
+
       <div id='contenido2' class="contenido"></div>
-      <input id='contenido'class="" type="text" value=" " disabled/>
+      <input id='contenido' class="" type="text" value=" " disabled />
 
 
       <div id="informacion"></div>
@@ -90,13 +90,13 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
 
-<!--Libreria de iconos iconify -->
+  <!--Libreria de iconos iconify -->
   <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
-  
+
   <!--libreria Jquery -->
- <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<!--libreria ajax-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <!--libreria ajax-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <!--libreria local js -->
   <script src="./Assets/JS/PopUp.js"></script>
 </body>
