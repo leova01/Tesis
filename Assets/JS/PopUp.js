@@ -30,7 +30,7 @@ function regresar() {
     },
   }).done(function (data) {
     
-    $("#informacion").html(data);
+    $("#informacion").text(data);
     
     console.log(data);
   });
