@@ -22,16 +22,16 @@
   <?php
   require './partials/header.php' //Requiriendo modulo de header
   ?>
+<!-- <a class="bubbly-button enviar" href="./controlador/CerrarSesion.php">Cerrar sesion</a> -->
 
-
-  <main class="">
+  <main class="mt-5">
 
     <?php require './controlador/PrepOrCord.php'; ?>
     <div class='grid border'>
 
 
       <div class="item border">
-        <h2>Seleccion de aula</h2>
+        <h2>Seleccion de laboratorio</h2>
         <form action="">
           <div>
             <h3 class="d-inline">1F</h3>
@@ -80,7 +80,7 @@
       <button type="button" id="procesar">Aceptar</button>
     </div>
 
-    <a class="bubbly-button enviar" href="./controlador/CerrarSesion.php">Cerrar sesion</a>
+
   </main>
   <?php
   require './partials/Footer.php'

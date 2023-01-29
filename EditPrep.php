@@ -8,7 +8,8 @@ $query = mysqli_query($conex, $sql);
 
 $row = mysqli_fetch_array($query);
 ?>
-
+<?php require './controlador/SessionOn.php'; ?>
+<!--Validacion de logueo-->
 
 <!doctype html>
 <html lang="es">
@@ -34,7 +35,11 @@ $row = mysqli_fetch_array($query);
   <div class="container mt-5">
         <form action="" method="POST">
 
-            <input type="text" class="form-control mb-3" name="ID" placeholder="ID" value="<?php echo $row['ID']  ?>">
+
+            <input type="text" class="form-control mb-3" name="ID" placeholder="ID" value="<?php echo $row['ID']  ?>" id="ID">
+<script>
+document.getElementById("ID").style.visibility = "hidden";
+</script>
 
             <input type="text" class="form-control mb-3" name="Nombre" placeholder="Nombre" value="<?php echo $row['Nombre']  ?>">
 

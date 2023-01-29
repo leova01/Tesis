@@ -20,6 +20,12 @@ function ClosePopUp() {
 
 $("#procesar").click(regresar);
 
+
+
+
+
+
+
 function regresar() {
   $.ajax({
     url: "./controlador/Mapeo.php",
@@ -30,8 +36,37 @@ function regresar() {
     },
   }).done(function (data) {
     
-    $("#informacion").text(data);
+    $("#informacion").text('');
     
-    console.log(data);
+    $('<div>')
+    .attr('id', 'myPcContainer')
+    .html('')
+    .appendTo('#informacion');
+
+    data.forEach(PC => {
+      function NetworkObject(ID, Nombre, Ubicacion, Estado, IP, MAC) {
+        this.ID = ID;
+        this.Nombre = Nombre;
+        this.Ubicacion = Ubicacion;
+        this.Estado = Estado;
+        this.IP = IP;
+        this.MAC = MAC;
+      }
+
+let dispositivo= new NetworkObject(PC.ID, PC.Nombre, PC.Ubicacion, PC.Estado, PC.IP, PC.MAC);
+console.log(dispositivo.ID); //
+console.log(dispositivo.Nombre); // 
+console.log(dispositivo.Ubicacion); // 
+console.log(dispositivo.Estado); // 
+console.log(dispositivo.IP); // 
+console.log(dispositivo.MAC); // 
+
+   
+
+});
+
+    
+  
+
   });
 }

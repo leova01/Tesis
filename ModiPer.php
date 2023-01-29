@@ -2,9 +2,12 @@
 <?php
 require './controlador/database.php';
 require './controlador/SessionOn.php';
+require './controlador/buscarPrep.php';
 
 $sql = "SELECT `ID`,`Nombre`,`Apellido`,`email`,`Nivel`FROM `usuario`";
 $query = mysqli_query($conex, $sql);
+
+
 
 ?>
 
@@ -28,19 +31,13 @@ $query = mysqli_query($conex, $sql);
         <?php require './partials/header.php'; ?>
     </header>
     <main>
-        <h1>Ingrese datos del trabajador</h1>
-        <form action="">
-            <input type="text" placeholder="Nombre">
-            <input type="text" placeholder="Apellido">
-            <input type="text" placeholder="Email">
-            <input type="button" value="Buscar" class="btn btn-info">
-            
-        </form>
+        <h1>Datos de trabajadores</h1>
+
+        <a class='btn btn-info btn-sm float-right' href='./regisForm.php'>Registrar</a>
         <div>
             <table class="table mt-5">
                 <thead class="table-success table-striped">
                     <tr>
-                        <th>ID</th>
                         <th>Nombre</th>
                         <th>Apellido</th>
                         <th>Email</th>
@@ -55,14 +52,22 @@ $query = mysqli_query($conex, $sql);
                     while ($row = mysqli_fetch_assoc($query)) {
                     ?>
                         <tr>
-                            <th><?php echo $row['ID'] ?></th>
                             <th><?php echo $row['Nombre'] ?></th>
 
                             <th><?php echo $row['Apellido'] ?></th>
 
                             <th><?php echo $row['email'] ?></th>
 
-                            <th><?php echo $row['Nivel'] ?></th>
+                            <th><?php
+                            if($row['Nivel']==='1'){
+                                echo 'Administrador';
+                            }
+                            if($row['Nivel']==='2'){
+                                 echo 'Preparador'; 
+                            }
+                           
+                            
+                            ?></th>
 
                             <th><a href="./EditPrep.php?ID=<?php echo $row['ID'] ?>" class="btn btn-info">Editar</a></th>
 
