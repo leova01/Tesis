@@ -2,7 +2,6 @@
 <?php
 require './controlador/database.php';
 require './controlador/SessionOn.php';
-require './controlador/buscarPrep.php';
 
 $sql = "SELECT `ID`,`Nombre`,`Apellido`,`email`,`Nivel`FROM `usuario`";
 $query = mysqli_query($conex, $sql);
