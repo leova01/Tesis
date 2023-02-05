@@ -32,24 +32,8 @@
 
       <div class="item border">
         <h2>Seleccion de laboratorio</h2>
+        <img class='rounded mx-auto d-block img-fluid' style='width:125px;' src="./Assets/IMG/computadora.png" alt="">
         <form action="">
-          <div>
-            <h3 class="d-inline">1F</h3>
-            <ul class="d-inline">
-              <il><input onclick="PopUp('F3')" class="opcion" type="button" value="F3" /></il>
-              <il><input onclick="PopUp('F4')" class="opcion" type="button" value="F4" /></il>
-              <il><input onclick="PopUp('F5')" class="opcion" type="button" value="F5" /></il>
-              <il><input onclick="PopUp('F6')" class="opcion" type="button" value="F6" /></il>
-              <il><input onclick="PopUp('F7')" class="opcion" type="button" value="F7" /></il>
-              <il><input onclick="PopUp('F8')" class="opcion" type="button" value="F8" /></il>
-              <il><input onclick="PopUp('F9')" class="opcion" type="button" value="F9" /></il>
-              <il><input onclick="PopUp('F10')" class="opcion" type="button" value="F10" /></il>
-              <il><input onclick="PopUp('F11')" class="opcion" type="button" value="F11" /></il>
-              <il><input onclick="PopUp('F12')" class="opcion" type="button" value="F12" /></il>
-            </ul>
-          </div>
-
-
           <div>
             <h3 class="d-inline">Prueba</h3>
             <ul class="d-inline">
@@ -63,6 +47,7 @@
 
       <div class='item border'>
         <h2>Ver registros previos</h2>
+        <img class='rounded mx-auto d-block img-fluid' style='width:125px;' src="./Assets/IMG/reporte.png" alt="">
         <a class='bubbly-button enviar'>Solicitar Registros</a>
       </div>
 

@@ -34,8 +34,48 @@ si.cpu().then(data => {
       //Convertimos el objeto a un json
       const jsonData = JSON.stringify(info);
       //Escribimos el json en un archivo
-      fs.writeFileSync("informacionPC.json", jsonData);
+      fs.writeFileSync(`informacionPC-${os.hostname}.json`, jsonData);
       console.log("La información de la PC ha sido guardada en el archivo informacionPC.json");
     });
   });
 });
+
+
+const mysql = require('mysql2');
+
+// Conectarse a la base de datos MySQL
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'dailylabcomp'
+});
+
+const jsonData = JSON.parse(fs.readFileSync(`informacionPC-${os.hostname}.json`, 'utf-8'));
+
+// Preparar los datos para la consulta SQL
+const nombreDispositivo = jsonData.nombreDispositivo;
+const arquitectura = jsonData.sistema.arquitectura;
+const plataforma = jsonData.sistema.plataforma;
+const versionSO = jsonData.sistema.versionSO;
+const fecha = jsonData.fecha;
+const hora = jsonData.hora;
+const fabricanteCPU = jsonData.cpu.fabricante;
+const modeloCPU = jsonData.cpu.modelo;
+const velocidadCPU = jsonData.cpu.velocidad;
+const memoriaTotal = jsonData.memoria.total;
+const memoriaLibre = jsonData.memoria.libre;
+const fabricanteTarjetaGrafica = jsonData.tarjetaGrafica.fabricante;
+const modeloTarjetaGrafica = jsonData.tarjetaGrafica.modelo;
+const memoriaTarjetaGrafica = jsonData.tarjetaGrafica.memoria;
+
+// Insertar los datos en la tabla
+const sql = `INSERT INTO chequeos2 (nombreDispositivo, arquitectura, plataforma, versionSO, fechaPC, horaPC, fabricanteCPU, modeloCPU, velocidadCPU, memoriaTotal, memoriaLibre, fabricanteTarjetaGrafica, modeloTarjetaGrafica, memoriaTarjetaGrafica, fechaRegistro)
+VALUES ('${nombreDispositivo}', '${arquitectura}', '${plataforma}', '${versionSO}', '${fecha}', '${hora}', '${fabricanteCPU}', '${modeloCPU}', '${velocidadCPU}', '${memoriaTotal}', '${memoriaLibre}', '${fabricanteTarjetaGrafica}', '${modeloTarjetaGrafica}', '${memoriaTarjetaGrafica}',CURDATE() )`;
+connection.query(sql, (error, results) => {
+  if (error) throw error;
+  console.log('Data inserted successfully');
+});
+
+// Cerrar la conexión a la base de datos
+connection.end();

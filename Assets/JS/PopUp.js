@@ -36,6 +36,13 @@ function regresar() {
     },
   }).done(function (data) {
     
+console.log(data);
+
+
+
+
+
+
     $("#informacion").text('');
     
     $('<div>')
@@ -64,9 +71,6 @@ console.log(dispositivo.MAC); //
    
 
 });
-
-    
-  
-
   });
+
 }
