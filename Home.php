@@ -40,6 +40,13 @@
               <il><input onclick="PopUp('K01')" class="opcion" type="button" value="Prueba" /></il>
             </ul>
           </div>
+
+          <div>
+
+ 
+
+          </div>
+
         </form>
 
       </div>
