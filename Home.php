@@ -43,7 +43,53 @@
 
           <div>
 
- 
+          <?php
+if (isset($_GET['submit'])) {
+  // Inicialización de cURL
+  $ch = curl_init();
+
+  // Configuración de la solicitud
+  curl_setopt($ch, CURLOPT_URL, 'http://localhost:3000/system-info');
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+    'Content-Type: application/json')
+  );
+
+  // Ejecución de la solicitud
+  $result = curl_exec($ch);
+
+  // Verificación de errores
+  if (curl_errno($ch)) {
+    echo 'Error: ' . curl_error($ch);
+  }
+
+  // Cierre de cURL
+  curl_close($ch);
+
+  // Decodificación de la respuesta
+  $response = json_decode($result, true);
+
+  // Acceso a los datos de la respuesta
+  echo 'Nombre del dispositivo: ' . $response['nombreDispositivo'] . '<br>';
+  echo 'Arquitectura del sistema: ' . $response['sistema']['arquitectura'] . '<br>';
+  echo 'Plataforma del sistema: ' . $response['sistema']['plataforma'] . '<br>';
+  echo 'Versión del SO: ' . $response['sistema']['versionSO'] . '<br>';
+  echo 'Fecha: ' . $response['fecha'] . '<br>';
+  echo 'Hora: ' . $response['hora'] . '<br>';
+  echo 'Fabricante de la CPU: ' . $response['cpu']['fabricante'] . '<br>';
+  echo 'Modelo de la CPU: ' . $response['cpu']['modelo'] . '<br>';
+  echo 'Velocidad de la CPU: ' . $response['cpu']['velocidad'] . '<br>';
+  echo 'Memoria total: ' . $response['memoria']['total'] . '<br>';
+  echo 'Memoria libre: ' . $response['memoria']['libre'] . '<br>';
+  echo 'Fabricante de la tarjeta gráfica: ' . $response['tarjetaGrafica']['fabricante'] . '<br>';
+  echo 'Modelo de la tarjeta gráfica: ' . $response['tarjetaGrafica']['modelo'] . '<br>';
+  echo 'Memoria de la tarjeta gráfica: ' . $response['tarjetaGrafica']['memoria'] . '<br>';
+}
+?>
+
+<form method="get">
+  <input type="submit" name="submit" value="Enviar">
+</form>
 
           </div>
 
