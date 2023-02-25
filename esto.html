@@ -1,14 +1,26 @@
-[
-  {
-    "ID": "4",
-    "Nombre": "P01",
-    "Ubicacion": "K01",
-    "Estado": "A",
-    "IP": "192.168.81.25",
-    "MAC": "14-18-c3-06-14-E1"
-  }
-]
-
-<img src="./Assets/IMG/reporte.png" alt="">
 
 
+$host = '10.10.81.117';  // dirección IP de la PC cliente
+$username = 'lv';  // nombre de usuario para la conexión SSH
+$password = 'leona026';  // contraseña para la conexión SSH
+
+// Comando a ejecutar en la PC cliente
+$cmd = 'node pruebaExamen.js';
+
+// Establecer la conexión SSH y ejecutar el comando
+$ssh = ssh2_connect($host);
+ssh2_auth_password($ssh, $username, $password);
+ssh2_exec($ssh, $cmd);
+
+
+$output = ssh2_exec($ssh, $cmd);
+
+// Leer la salida del comando
+stream_set_blocking($output, true);
+$data = '';
+while ($buf = fread($output, 4096)) {
+    $data .= $buf;
+}
+
+// Mostrar la salida del comando
+echo $data;

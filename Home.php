@@ -1,5 +1,5 @@
 <?php require './controlador/SessionOn.php'; ?>
-<!--Validacion de logueo-->
+<!--Validación de login-->
 
 <!doctype html>
 <html lang="en">
@@ -93,6 +93,100 @@ if (isset($_GET['submit'])) {
 
           </div>
 
+<div> <!--EJECUCION COMANDO PHP-->
+            <?php
+// if(isset($_POST['ejecutar'])) {
+// require './controlador/database.php';
+
+
+// $sql = "select ip from equipos where Ubicacion = 'k01'";
+// $query = mysqli_query($conex, $sql);
+
+// while ($row = mysqli_fetch_assoc($query)) {
+//   $ip = $row['ip'];
+
+
+  
+// $host = $ip;  // dirección IP de la PC cliente
+// $username = 'lv';  // nombre de usuario para la conexión SSH
+// $password = 'leona026';  // contraseña para la conexión SSH
+
+// // Comando a ejecutar en la PC cliente
+// $cmd = 'node pruebaExamen.js';
+
+// // Establecer la conexión SSH y ejecutar el comando
+// $ssh = ssh2_connect($host);
+
+
+//   ssh2_auth_password($ssh, $username, $password);
+//   $output = ssh2_exec($ssh, $cmd);
+  
+//   // Leer la salida del comando
+//   stream_set_blocking($output, true);
+//   $data = '';
+//   while ($buf = fread($output, 4096)) {
+//       $data .= $buf;
+//   }
+  
+//   // Mostrar la salida del comando
+//   echo $data;
+
+
+
+
+
+//   }
+
+// }
+
+
+
+if(isset($_POST['ejecutar'])) {
+  require './controlador/database.php';
+
+  $sql = "select ip,user,contraseña from equipos where Ubicacion = 'k01'";
+  $query = mysqli_query($conex, $sql);
+
+  while ($row = mysqli_fetch_assoc($query)) {
+    $ip = $row['ip'];
+    $user=$row['user'];
+    $pass=$row['contraseña'];
+
+    $host = $ip;  // dirección IP de la PC cliente
+    $username = $user;  // nombre de usuario para la conexión SSH
+    $password = $pass;  // contraseña para la conexión SSH
+    $cmd = 'node pruebaExamen.js'; // Comando a ejecutar en la PC cliente
+
+    $ssh = ssh2_connect($host);
+    error_reporting(E_ALL & ~E_WARNING); // Ocultar las advertencias de tipo E_WARNING            
+    $auth = ssh2_auth_password($ssh, $username, $password); // Realizar la autenticación SSH</div>
+    error_reporting(E_ALL); // Restaurar el nivel de informe de errores por defecto
+    if ($auth) {
+      $output = ssh2_exec($ssh, $cmd);
+      stream_set_blocking($output, true);
+      $data = '';
+      while ($buf = fread($output, 4096)) {
+        $data .= $buf;
+      }
+      echo $data;
+    } else {
+      echo "No se pudo establecer la conexión SSH para el equipo con la dirección IP: " . $ip;
+    }
+  }
+}
+
+
+
+
+?>
+
+<form method="post">
+    <input type="submit" name="ejecutar" value="Ejecutar comando">
+</form>
+
+
+</div>
+
         </form>
 
       </div>
@@ -129,7 +223,7 @@ if (isset($_GET['submit'])) {
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
 
   <!--Libreria de iconos iconify -->
-  <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></>
 
   <!--libreria Jquery -->
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
