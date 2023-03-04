@@ -1,0 +1,80 @@
+
+
+h2 {
+    font-family: Segoe UI Light;
+    letter-spacing: 1px;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+.container {
+    margin: 50px auto;
+}
+#item{
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    margin: 0px 0px;
+    padding: 25px 10px;
+    outline: none;
+    text-align: left;
+}
+#item:focus, #item:active, #item:hover {
+    text-decoration: none;
+    outline: none;
+}
+#item:focus .container-block, #item:active .container-block, #item:hover .container-block{
+    -webkit-transition: all 0.4s ease-in;
+    -moz-transition: all 0.4s ease-in;
+    -ms-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+    border-radius: 5px;
+    box-shadow: -7px -7px 14px 0px #FFFFFF, 5px 5px 13px 0px #173187;
+}
+.container-block {
+    -webkit-transition: all 0.4s ease-in;
+    -moz-transition: all 0.4s ease-in;
+    -ms-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+    border-radius: 5px;
+    padding: 12px 8px;
+    text-align: left;
+    cursor: pointer;
+}
+.block1 {
+    display:inline-block;
+    width: 47px;
+    text-align: center;
+}
+.block1 i {
+    -webkit-transition: all 0.4s ease-in;
+    -moz-transition: all 0.4s ease-in;
+    -ms-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+    font-size: 31px;
+    color: #616161;
+}
+#item:focus .block1 i, #item:active .block1 i, #item:hover .block1 i {
+    -webkit-transition: all 0.4s ease-in;
+    -moz-transition: all 0.4s ease-in;
+    -ms-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+    color: #00ACC1;
+}
+.block2 {
+    display:inline-block;
+    text-align: left;
+}
+.block2 span {
+    font-size: 16px;
+    color: #000000;
+}
+.block2 p {
+    font-size: 12px;
+    color: #757575;
+}

@@ -1,0 +1,10 @@
+{
+    "cSpell.words": [
+        "controlador",
+        "Requiriendo"
+    ],
+    "php.stubs": [
+        "*",
+        "ssh2"
+    ]
+}
