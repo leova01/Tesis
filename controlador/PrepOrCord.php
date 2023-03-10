@@ -12,6 +12,7 @@ echo"
 
 <div class='item border'>
 <h2>Personal</h2>
+<img class='rounded mx-auto d-block img-fluid ' src='Assets/IMG/grupo.png' alt='' style='width:125px;'>
 <a class='bubbly-button' href='./ModiPer.php'>Entrar</a>
 </div>
 

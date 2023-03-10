@@ -1,8 +1,8 @@
 <?php require './controlador/SessionOn.php'; ?>
-<!--Validacion de logueo-->
+<!--Validación de login-->
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <title>Labcomp</title>
@@ -22,7 +22,7 @@
   <?php
   require './partials/header.php' //Requiriendo modulo de header
   ?>
-<!-- <a class="bubbly-button enviar" href="./controlador/CerrarSesion.php">Cerrar sesion</a> -->
+
 
   <main class="mt-5">
 
@@ -31,54 +31,34 @@
 
 
       <div class="item border">
-        <h2>Seleccion de laboratorio</h2>
-        <form action="">
+        <h2>Equipos</h2>
+        <img class='rounded mx-auto d-block img-fluid' style='width:125px;' src="./Assets/IMG/computadora.png" alt="">
           <div>
-            <h3 class="d-inline">1F</h3>
-            <ul class="d-inline">
-              <il><input onclick="PopUp('F3')" class="opcion" type="button" value="F3" /></il>
-              <il><input onclick="PopUp('F4')" class="opcion" type="button" value="F4" /></il>
-              <il><input onclick="PopUp('F5')" class="opcion" type="button" value="F5" /></il>
-              <il><input onclick="PopUp('F6')" class="opcion" type="button" value="F6" /></il>
-              <il><input onclick="PopUp('F7')" class="opcion" type="button" value="F7" /></il>
-              <il><input onclick="PopUp('F8')" class="opcion" type="button" value="F8" /></il>
-              <il><input onclick="PopUp('F9')" class="opcion" type="button" value="F9" /></il>
-              <il><input onclick="PopUp('F10')" class="opcion" type="button" value="F10" /></il>
-              <il><input onclick="PopUp('F11')" class="opcion" type="button" value="F11" /></il>
-              <il><input onclick="PopUp('F12')" class="opcion" type="button" value="F12" /></il>
+            <ul class="d-block">
+              <il><a class="bubbly-button enviar mx-auto" href="./GestionMaquinas.php">Gestion de equipos</a></il>
             </ul>
           </div>
 
 
-          <div>
-            <h3 class="d-inline">Prueba</h3>
-            <ul class="d-inline">
-              <il><input onclick="PopUp('K01')" class="opcion" type="button" value="Prueba" /></il>
-            </ul>
           </div>
-        </form>
+
+
+          <div class='item border d-inline'>
+        <h2>Anotaciones de registros previos</h2>
+        <img class='rounded mx-auto d-block img-fluid' style='width:125px;' src="./Assets/IMG/reporte.png" alt="">
+        <a href="./anotaciones.php" class='bubbly-button enviar'>Anotaciones</a>
+      </div>
+
+ 
 
       </div>
 
 
-      <div class='item border'>
-        <h2>Ver registros previos</h2>
-        <a class='bubbly-button enviar'>Solicitar Registros</a>
-      </div>
+
 
     </div>
 
-    <div class='ventana' id='ventana'>
-      <iconify-icon icon='material-symbols:close' onclick='ClosePopUp()' class='salir'></iconify-icon>
 
-
-      <div id='contenido2' class="contenido"></div>
-      <input id='contenido' class="" type="text" value=" " disabled />
-
-
-      <div id="informacion"></div>
-      <button type="button" id="procesar">Aceptar</button>
-    </div>
 
 
   </main>
@@ -92,13 +72,12 @@
 
   <!--Libreria de iconos iconify -->
   <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
-
-  <!--libreria Jquery -->
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <!--libreria Jquery-->
+<script src = "https://code.jquery.com/jquery-3.6.3.min.js" ></script>
   <!--libreria ajax-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <!--libreria local js -->
-  <script src="./Assets/JS/PopUp.js"></script>
+  
 </body>
 
 </html>
