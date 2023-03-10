@@ -44,9 +44,9 @@
 
 
           <div class='item border d-inline'>
-        <h2>Ver registros previos</h2>
+        <h2>Anotaciones de registros previos</h2>
         <img class='rounded mx-auto d-block img-fluid' style='width:125px;' src="./Assets/IMG/reporte.png" alt="">
-        <a class='bubbly-button enviar'>Solicitar Registros</a>
+        <a href="./anotaciones.php" class='bubbly-button enviar'>Anotaciones</a>
       </div>
 
  
@@ -71,14 +71,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
 
   <!--Libreria de iconos iconify -->
-  <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js">
-    < />
-
-    <
-    !--libreria Jquery-- >
-    <
-    script src = "https://code.jquery.com/jquery-3.6.3.min.js" >
-  </script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+  <!--libreria Jquery-->
+<script src = "https://code.jquery.com/jquery-3.6.3.min.js" ></script>
   <!--libreria ajax-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <!--libreria local js -->

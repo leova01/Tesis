@@ -66,9 +66,6 @@ document.getElementById("ID").style.visibility = "hidden";
 
       <?php require './controlador/ActualizarModPc.PHP' ?>
 
-
-      <!-- EY TE QUEDASTE EN ARREGLAR ESTA OPCION -->
-
     </div>
   </main>
   <footer>

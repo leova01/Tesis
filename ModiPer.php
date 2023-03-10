@@ -15,7 +15,7 @@ $query = mysqli_query($conex, $sql);
 <html lang="es">
 
 <head>
-    <title>Title</title>
+    <title>Datos de preparador</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,7 +23,7 @@ $query = mysqli_query($conex, $sql);
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="./Assets/CSS/Style.css">
-
+    <link rel="shortcut icon" href="./Assets/IMG/favicon.ico" type="image/x-icon"/>
 </head>
 
 <body>
@@ -31,7 +31,13 @@ $query = mysqli_query($conex, $sql);
         <?php require './partials/header.php'; ?>
     </header>
     <main>
-        <h1>Datos de trabajadores</h1>
+        <div class="">
+            <div class="d-flex flex-row mb-3 ms-3"><a href="./Home.php" class="btn btn-info btn-sm float-left mt-3 me-5">Volver</a></div>
+            <h1>Datos de trabajadores</h1>
+
+
+        </div>
+        
 
         <a class='btn btn-info btn-sm float-right' href='./regisForm.php'>Registrar</a>
         <div>

@@ -22,7 +22,7 @@
   ?>    
 
 <main class="mt5">
-
+<div class="d-flex flex-row mb-3 ms-3"><a href="./Home.php" class="btn btn-info btn-sm float-left mt-3 me-5">Volver</a></div>
 <div class="grid mt-5">
     <div class="item border mt-5">
         <h2>Modificar informacion de equipos</h2>
@@ -40,7 +40,7 @@
         <img src="./Assets/IMG/analisis.png" alt="" class='rounded mx-auto d-block img-fluid' style='width:125px;'>
         <div>
             <ul class="d-block">
-              <il><a class="bubbly-button enviar" href="./seleccionLab.php">Analizar</a></il>
+              <il><a class="bubbly-button enviar" href="./seleccionLaboratorio.php">Analizar</a></il>
             </ul>
           </div>
     </div>

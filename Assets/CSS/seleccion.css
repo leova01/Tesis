@@ -78,3 +78,114 @@ h2 {
     font-size: 12px;
     color: #757575;
 }
+
+/*=================================================================================================*/
+
+.loader {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+.loader:after {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-top: 30%;
+    border-radius: 50%;
+    border: 6px solid #ccc;
+    border-top-color: #07148a;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+
+/*=================================================================================================*/
+
+.btn-hover{ 
+    background-color: #07148a;
+    color:#fff;
+}
+
+.btn-hover p{
+    color: #fff;
+  }
+
+  .btn-hover span{
+    color: #fff;
+  }
+
+  .btn-hover i{
+    color: #fff;
+  }
+
+.btn-hover:hover {
+    background-color: rgba(146, 114, 114, 0.13);
+    color: #07148a;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-hover:hover p{
+    color: #07148a;
+  }
+
+  .btn-hover:hover span{
+    color: #07148a;
+  }
+
+  .btn-hover:hover i{
+    color: #07148a;
+  }
+ 
+/*=================================================================================================*/
+  .carousel {
+    pointer-events: none;
+    touch-action: none;
+  }
+  
+  .carousel.slide {
+    pointer-events: auto;
+    touch-action: pan-y;
+  }
+
+  .carousel-control-next{
+    color: #00ACC1;
+    background-color: #00ACC1;
+    height: 50px;
+    width: 50px;
+    margin-right: 1rem;
+    margin-top: 1rem;
+  }
+
+  .carousel-control-next-icon {
+    background-color: #07148a;
+    height: 50px;
+    width: 50px;
+  }
+
+  .carousel-control-prev{
+    color: #00ACC1;
+    background-color: #00ACC1;
+    height: 50px;
+    width: 50px;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+
+  .carousel-control-prev-icon {
+    background-color: #07148a;
+    height: 50px;
+    width: 50px;
+  }
+

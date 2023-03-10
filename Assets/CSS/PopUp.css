@@ -32,3 +32,7 @@ left:2rem;
 .opcion:hover{
     color: red;
 }
+
+textarea {
+    resize: none;
+  }
